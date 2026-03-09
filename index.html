@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="3; url=https://imprakhartripathi.netlify.app">
+  <title>Redirecting...</title>
+  <link rel="icon" src="./client/assets/myicon.png" type="image/png">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .spinner {
+      margin: 20px;
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    // Fallback in case meta refresh doesn’t work
+    setTimeout(() => {
+      window.location.href = "https://imprakhartripathi.netlify.app";
+    }, 3500);
+  </script>
+</head>
+<body>
+  <div class="spinner"></div>
+  <h1>You are being redirected...</h1>
+  <p>The site has been moved to a new address.<br>You’ll be taken to the new site address shortly.</p>
+  <p>If not, <a href="https://imprakhartripathi.netlify.app">click here</a>.</p>
+</body>
+</html>

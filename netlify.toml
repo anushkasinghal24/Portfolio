@@ -1,0 +1,19 @@
+# Redirect Netlify default domain → your main .in domain
+[[redirects]]
+  from = "https://imprakhartripathi.netlify.app/*"
+  to = "https://imprakhartripathi.in/:splat"
+  status = 301
+  force = true
+
+# Redirect www → root domain
+[[redirects]]
+  from = "https://www.imprakhartripathi.in/*"
+  to = "https://imprakhartripathi.in/:splat"
+  status = 301
+  force = true
+
+# SPA fallback: serve index.html for direct deep links like /projects
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

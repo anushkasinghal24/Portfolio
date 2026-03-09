@@ -1,0 +1,5 @@
+export { CapabilityCategoryCard } from './components/CapabilityCategoryCard'
+export { CapabilityCategoryModal } from './components/CapabilityCategoryModal'
+export { CapabilityMatrixSection } from './components/CapabilityMatrixSection'
+export { capabilityCategories } from './data'
+export type { CapabilityCategory, CapabilityMatrixItem } from './types'

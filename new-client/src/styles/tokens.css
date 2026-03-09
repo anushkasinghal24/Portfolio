@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --surface-bg: #030712;
+  --surface-elevated: #0b1220;
+  --surface-panel: #111a2e;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --line-soft: rgba(255, 255, 255, 0.16);
+  --line-strong: rgba(255, 255, 255, 0.34);
+  --accent-cyan: #ffffff;
+  --accent-green: #d1d1d1;
+  --primary-blue: #ffffff;
+  --glow-cyan: rgba(255, 255, 255, 0.12);
+  --max-content-width: 1600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.08), transparent 34%),
+    radial-gradient(circle at 90% 0%, rgba(255, 255, 255, 0.05), transparent 30%),
+    linear-gradient(180deg, #000000, #0a0a0a 45%, #121212),
+    var(--surface-bg);
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
