@@ -7,9 +7,8 @@ const app = express();
 app.use(express.json({ limit: "1mb" }));
 
 const allowedOrigins = [
-  "https://imprakhartripathi.github.io",
-  "https://imprakhartripathi.netlify.app",
-  "https://imprakhartripathi.in",
+  "https://anushkasinghal24.github.io",
+  "https://anushkasinghal24.netlify.app",
   "http://localhost:5173",
   "http://127.0.0.1:5173",
   "http://localhost:4173",
@@ -70,7 +69,7 @@ async function sendEmail(payload) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.CONTACT_TO || "imprakhartripathiofficial@gmail.com",
+    to: process.env.CONTACT_TO || "anushkasinghal233@gmail.com",
     replyTo: payload.email,
     subject: `Portfolio Contact: ${payload.subject}`,
     text: `Name: ${payload.name}\nEmail: ${payload.email}\n\nMessage:\n${payload.message}`,
