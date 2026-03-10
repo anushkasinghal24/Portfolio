@@ -2032,3 +2032,119 @@ body {
 .capability-category__group-icon {
   box-shadow: none !important;
 }
+
+/* Skills Modal Scroll + No Blue Background */
+.capability-modal {
+  /* Allow the overlay itself to scroll on short viewports */
+  overflow: auto !important;
+  place-items: start center !important;
+  align-content: start !important;
+  padding: 16px !important;
+}
+
+.capability-modal__backdrop {
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+
+.capability-modal__panel {
+  width: min(960px, 94vw) !important;
+  max-height: calc(100vh - 32px) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(180deg, #0a0a0a, #151515) !important;
+}
+
+.capability-category {
+  background: linear-gradient(180deg, rgba(12, 12, 12, 0.92), rgba(20, 20, 20, 0.9)) !important;
+}
+
+.capability-icon-tile {
+  color: #ffffff !important;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.92), rgba(32, 32, 32, 0.9)) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+@media (max-width: 900px) {
+  .capability-modal {
+    padding: 12px !important;
+  }
+
+  .capability-modal__panel {
+    width: min(560px, 96vw) !important;
+    max-height: calc(100vh - 24px) !important;
+  }
+}
+
+/* Skills Section Background (No Blue Tint) */
+.section-wrapper.capability-matrix {
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.96), rgba(18, 18, 18, 0.94)) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Skills Modal: Centered + Scrollable Panel */
+.capability-modal {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  overflow: auto !important;
+  padding: 16px !important;
+}
+
+.capability-modal__backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+}
+
+.capability-modal__panel {
+  margin: 0 auto !important;
+  /* Center when it fits; scroll overlay when it doesn't. */
+  margin-block: auto !important;
+  max-height: min(calc(100vh - 32px), 740px) !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+}
+
+@media (max-width: 900px) {
+  .capability-modal {
+    padding: 12px !important;
+  }
+
+  .capability-modal__panel {
+    max-height: calc(100vh - 24px) !important;
+  }
+}
+
+/* Skills Modal: Final Responsive + Scroll Fix
+   Body scroll is locked in JS while modal is open, so the modal overlay must scroll. */
+.capability-modal {
+  display: block !important;
+  overflow: auto !important;
+  padding: 24px 16px !important;
+}
+
+.capability-modal__panel {
+  margin: 0 auto !important;
+  width: min(980px, 94vw) !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.capability-modal__skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.capability-modal__skill-card {
+  padding: 14px 10px 12px !important;
+}
+
+@media (max-width: 600px) {
+  .capability-modal {
+    padding: 16px 12px !important;
+  }
+
+  .capability-modal__skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
